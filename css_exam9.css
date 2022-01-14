@@ -1,0 +1,15 @@
+/* 우선순위  */
+/* 태그선택자 < 클래스선택자 < 아이디선택자 < 인라인방식 */
+
+div {
+    background-color: gainsboro;
+}
+
+.box11{
+    background-color: gold;
+}
+
+
+#box1{
+    background-color: olivedrab;
+}

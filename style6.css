@@ -1,0 +1,43 @@
+body{
+    margin-top: 70px;
+    /* 배경 이미지 */
+    background-color: url(images_back/pattern.gif);
+}
+.box1{
+    width: 1000px;
+    height: 600px;
+    border:2px solid greenyellow;
+    margin:20px auto;
+    background-image: url(images_back/back_black2.gif);
+    background-repeat: no-repeat; /*한 번만 채우기*/
+    background-color: indigo;
+    /* 배경 이미지 시작 위치 xpx ypx / center left right */
+    background-position: center center;
+}
+
+.box2{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 20px auto;
+    /* 배경 이미지 축약 속성 */
+    background: url(smile/amazed.png) yellow no-repeat center bottom;
+}
+
+.box3{
+    width: 500px;
+    height: 500px;
+    border:2px solid black;
+    background:white;
+
+}
+
+.box3>ul{
+    list-style-image: url(images_icon/arrow.gif);
+    line-height: 170%; /*줄 간격*/
+}
+.box3>ul>li:first-child {
+    list-style-image: url(images_icon/arrow.gif);
+    color:red;
+    font-weight: bold;
+}

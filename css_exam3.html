@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* 자손 선택자 */
+        /* box1 아이디값을 갖는 요소안의 h2 디자인 */
+        #box1 h2 {
+            background-color: lightseagreen;
+        }
+        /* 직계 자식 선택자 */
+        /* 선택자1>선택자2>선택자3 ... */
+        /* box1 아이디값을 갖는 요소안의 div 태그안의 h2 디자인 */
+        #box1>div>h2 {
+            border:2px solid green;
+        }
+        /* box1 아이디안의 모든 li */
+        #box1 li{
+            color:green;
+            font-weight: bold;
+        }
+        /* box1 아이디안의 ul 태그안의 li */
+        #box1>ul>li{
+            line-height: 250%
+        }
+        /* 클래스 선택자 */
+        .a{ text-align: center; }
+        .b{ text-align: right; }
+
+        /* box1 아이디안의 ul 태그안의 a 클래스 선택자 */
+        #box1>ul>.a{
+            font-size: 3em;
+        }
+
+          /* box1 아이디안의 ol 태그안의 b 클래스 선택자 */
+          #box1>ol>.b{
+            color: hotpink;
+        } 
+        /* 선택자가 길수록 우선순위가 있다. (요소안에 요소 임으로 우선순위 있기도 하다.) */
+
+        /* 
+            순서 선택자
+            선택자:first-child/last-child/nth-child(odd/even/숫자)
+         */
+        /* box2 아이디안의 ul의 첫번째 li */
+        #box2>ul>li:first-child{
+            background-color: red;
+            color: black;
+        }
+
+        /* box2 아이디안의 ul의 마지막 li */
+        #box2>ul>li:last-child{
+            background-color: lightblue;
+            color: black;
+        }
+        /* box2 아이디안의 ol의 짝수번째 li */
+        #box2>ol>li:nth-child(even){
+            background-color: yellowgreen;
+        }
+        /* box2 아이디안의 ol의 3번째 li */
+        #box2>ol>li:nth-child(3){
+            background-color: royalblue;
+        }
+
+        /* pBox1 아이디안의 첫번째 글자 */
+        #pBox1::first-letter {font-size: 2.5em; color: seagreen;}
+
+        /* pBox2 아이디안의 첫번째 행 */
+        #pBox2::first-line {font-weight: bold; font-style: italic;}
+
+        /* box3 아이디안의 div 안의 모든 이미지
+        #box3>div>img {
+            border: 1px solid red;
+        } */
+
+         /* box3 아이디안의 div 안의 첫번째 이미지 */
+         #box3>div>img:first-child {
+            border: 1px solid red;
+        }
+
+        /* box3 아이디안의 div 안의 두번째 이미지 */
+        /* #box3>div>img:nth-child(2) {
+            border: 1px solid blue;
+        } */
+        #box3>div>img:nth-of-type(2) {
+            border: 1px solid blueviolet;
+        }
+        /* 조금 더 엄격함 */
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS 선택자</h1>
+    <hr>
+    <div id="box1">
+        <div>
+            <h2>
+                sub box1
+            </h2>
+        </div>
+        <h2>Heading2-1</h2>
+        <ul>
+            <li class="a">목록</li>
+            <li>목록</li>
+            <li class="b">목록</li>
+            <li class="a">목록</li>
+        </ul>
+
+        <ol>
+            <li class="a">목록</li>
+            <li>목록</li>
+            <li class="b">목록</li>
+            <li>목록</li>
+        </ol>
+
+    </div>
+    <hr>
+
+    <div id="box2">
+        <div>
+            <h2>
+                sub box2
+            </h2>
+        </div>
+        <h2>Heading2-2</h2>
+        <ul>
+            <li>목록</li>
+            <li>목록</li>
+            <li>목록</li>
+            <li>목록</li>
+        </ul>
+
+        <ol>
+            <li>목록</li>
+            <li>목록</li>
+            <li>목록</li>
+            <li>목록</li>
+        </ol>
+
+    </div>
+    <hr>
+    <p id="pBox1">
+        
+    3. 하루 30분이상은 빠른 걸음으로 걷는다. <br>
+
+    -무리한 유산소 운동은 피부를 빨리 늙게 하고 근육에 무리를 준다. <br>
+
+    일정한 호흡으로 걷는 빠른 걸음은 무리도 적고 신체 근육에 도움이 된다.. 엘리베이터나 에스컬레이터 보다 계단을 이용하는 것도 <br>
+
+    한 방법이라 하겠다.
+    </p>
+    
+    <p id="pBox2">
+        10. 좋아하는 일을 해라. <br>
+
+    - 자신이 좋아하는 일을 하고 그에 맞는 직업을 가져라. <br>
+
+    하루하루 좋아하는 일을 하고 즐기는 것만큼 행복한 일은 없다. <br>
+
+    영국의 어떤 교수가 자신이 좋아하는 일을 하는 여성과 집안에서 <br>
+
+    하루하루 따분한 가사를 반복적으로 하는 여성이 신체나이가 많게는 10세에서 적게는2~3세 정도 차이가 난다는 실험결과를 얻었다고 한다. <br>
+    
+    집안에서 하는 가사가 즐겁다면 다행이지만 집안일이 짜증나고 지겹다면 가족들과 분담해라.. 하루하루 짜증이 늘어가는 것은 <br>
+
+    하루하루 주름살이 늘어가는 것과 같다
+    </p>
+    <hr>
+    <!-- div#box3>(h3{box3}+hr+p{문단}+div) -->
+    <div id="box3">
+        <h3>box3</h3>
+        <hr>
+        <p>문단</p>
+        <div>
+            <img src="smile/boss.png" alt="boss">
+            <img src="smile/cool.png" alt="cool">
+            <img src="smile/dribble.png" alt="dribble">
+        </div>
+    </div>
+    
+</body>
+</html>

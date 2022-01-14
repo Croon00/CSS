@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - head방식</title>
+    <!-- css 정의 -->
+    <style>
+        /* css영역 */
+        /* 선택자 {속성:값;} */
+
+        /* 태그 선택자 - h1 */
+        /* 태그명 {속성:값;} */
+        h1 { color: yellowgreen;
+            font-size: 5em;
+        }
+        p {
+            border:1px solid black;
+            width: 400px;
+            background-color: lightblue;
+            text-align: center;
+        }
+        /* 그룹 선택자 + 태그 선택자
+    
+        선택자 1, 선택자2 ... {css 속성:값...} 
+        */
+        h1, h2, h3{
+            text-align: center;
+            font-weight: normal; /*진하게 해제*/
+        }
+        /* 클래스 선택자 정의(.선택자)
+            .클래스 이름 {속성:값;}
+            적용과정 : 태그안에 class=클래스이름
+         */
+        .redText {color:darkslateblue; 
+                    font-weight: bold;
+                    background-color: lightblue;}
+
+            /* 그룹 선택자 적용 */
+        .redText, h2{
+            border-bottom: double 5px green;
+        }
+        /* 아이디 선택자 정의
+            #아이디이름 {속성:값;}
+            적용과정 : 태그안에 id=아이디이름
+             */
+        #divBox1 { 
+            width: 100px; 
+            height: 100px; 
+            background-color: bisque;
+            }
+        #divBox2 { 
+            width: 200px; 
+            height: 200px; 
+            background-color: coral;
+            }
+            /* 클래스 선택자 정의 */
+            .box{
+                border: 1px solid darkviolet;
+            }
+    </style>
+</head>
+<body>
+    <!-- h1{Heading}+h2{Heading2}+p+ul>li{목록}*5 -->
+    <h1>Heading</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <p>
+        Hello world1 <br>
+        Hello world2 <br>
+        Hello world3
+    </p>
+    <ul>
+        <li class="redText">목록</li>
+        <li>목록</li>
+        <li class="redText">목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ul>
+    <hr>
+    <p>
+        Hello world1 <br>
+        Hello world2 <br>
+        Hello world3
+    </p>
+    <hr>
+    <!-- (div>h3{box$})*4 -->
+    <div id="divBox1" class="box">
+        <h3>box1</h3>
+        
+    </div>
+    <div id="divBox2" class="box">
+        <h3>box2</h3>
+        
+    </div>
+    <div class="box" >
+        <h3 >box3</h3>
+        
+    </div>
+    <div>
+        <h3>box4</h3>
+        
+    </div>
+</body>
+</html>

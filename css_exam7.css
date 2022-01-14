@@ -1,0 +1,120 @@
+#main1 {
+    width:600px;
+    height:500px; 
+    background: cornsilk;
+}
+
+#main1>div {
+    width:170px;
+    height: 170px;
+    /* floating 레이아웃 => 컬럼으로 배치 */
+    float: left;
+    /* float: right; */
+}
+
+#main1>div.sub1 { background: lightgray;}
+#main1>div.sub2 { background: lightpink;}
+#main1>div.sub3 { background: lightsteelblue;}
+
+/* 왼쪽과 오른쪽에 배치 */
+#main2 {
+    width:600px;
+    height:300px; 
+    background: lightslategrey;
+}
+
+#main2>div {
+    width:45%;
+    height: 170px;
+}
+
+#main2>div.sub1 { 
+        background: lightgray;
+        float: left;
+        }
+#main2>div.sub2 { 
+    background: lightpink;
+    float: right;}
+
+    
+/* clear 속성 이용하기 */
+#main3 {
+    width:600px;
+    height:300px; 
+    background: orange;
+}
+
+#main3>div.sub1, #main3>div.sub2, #main3>div.sub3 {
+    width:24%;
+    height: 120px;
+    float: left;
+}    
+
+#main3>div.sub4 {
+    /* float 해제 */
+    clear: both;
+    width:24%;
+    height: 120px;
+}
+
+#main3>div.sub1 {
+    background-color: palegoldenrod;
+}
+#main3>div.sub2 {
+    background-color: lightseagreen;
+}
+#main3>div.sub3 {
+    background-color: maroon;
+}
+#main3>div.sub4 {
+    background-color: mediumorchid;
+}
+
+
+/* CSS 레이아웃 퀴즈1 */
+#main4 {
+    width:600px;
+    margin: 20px auto;
+}
+
+#main4>div:nth-child(odd) {
+    background-color: mistyrose;
+}
+
+#main4>div:nth-child(even) {
+    background-color: olive;
+}
+
+#main4>div {
+    margin-bottom:5px;
+}
+
+#main4>div.sub1 {
+    height: 50px;
+    /* margin-bottom: 5px; */
+}
+
+#main4>div.sub2 {
+    height: 150px;
+    float: left;
+    width:80%;
+    /* margin-bottom:5px; */
+}
+
+#main4>div.sub3 {
+    height: 150px;
+    float: right;
+    width:19%;
+    /* margin-bottom:5px; */
+}
+
+#main4>div.sub4 {
+    clear: both;
+    height: 150px;
+    background-color: tomato;
+    /* margin-bottom:5px; */
+}
+
+#main4>div.sub5 {
+    height: 50px;
+}

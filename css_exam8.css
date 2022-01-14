@@ -1,0 +1,120 @@
+/* 절대 좌표 지정방식 absolute */
+#boxA, #boxB, #boxC {
+    width:100px;
+    height:100px; 
+    border:1px solid black;
+    /* 절대 좌표 방식으로 변경*/
+    position: absolute;
+}
+#boxA {
+    background-color: tomato;
+    left:0px; 
+    top:0px;
+    /* 겹치기 순서 */
+    z-index: 3; 
+}
+
+#boxB {
+    background-color: yellow;
+    /* left:-50px; */
+    left:50px;
+    top:50px;
+    z-index: 2;
+}
+
+#boxC {
+    background-color: thistle;
+    left:100px;
+    top:100px;
+    z-index: 1;
+}
+
+/* 상대 위치 방식
+ position:relative
+*/
+#main1 {margin-top:100px}
+#main1>h2 {
+    /* 현재 위치를 기준으로 좌표 지정 가능 */
+    position: relative;
+    top:-50px;
+    left:300px;
+    width:100px; 
+    background-color: darkorange;
+}
+#main1>ul {}
+#main1>div>img {position: relative;}
+#main1>div>img:first-child { 
+        top:-30px; 
+        left:60px; 
+        z-index:2;
+    }
+
+/*  부모 요소는 relative
+    자식요소는 absolute
+*/
+#main2 {
+    margin:10px auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    position:relative;
+}
+
+#main2>h2 {
+    width:100px; 
+    background-color: darkorange;
+    /* 부모요소의 11시방향이 0, 0 */
+    position: absolute;
+    margin:0;
+    top:0;
+    left:0;
+}
+
+/* #main2>img:nth-child(2) { */
+#main2>img:first-of-type {
+    border: 1px solid black;
+    position: relative;
+    left:100px;
+    top:100px;
+}
+
+
+/* img => 블록 요소 */
+#main3>div>img {
+    display: block;
+    margin:10px auto;
+}
+
+/* li => 인라인요소 */
+#main3>ul>li {
+    display: inline;
+}
+
+#main3>ul {
+    text-align: center;
+}
+
+/* 폼 요소 => 블록 요소 */
+#form1 { 
+    width: 400px;
+}
+
+/* *전체 선택자  */
+/* form1 안의 모든 하위 요소 */
+#form1 * {
+    display: block;
+    margin-bottom:10px;
+}
+
+#form1>textarea , #form1>input {
+    background-color: lightgray;
+    border:1px solid darkslategray;
+    color:white;
+    padding:5px;
+}
+
+#form1>input:last-child {
+    border-radius: 5px;
+    background-color: dimgray;
+    padding:5px 10px;
+}

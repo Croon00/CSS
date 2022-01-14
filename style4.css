@@ -1,0 +1,103 @@
+/* 문서 전체에 적용되는 디자인 초기화 */
+body { background-color: lightcyan; 
+        color:gray}
+
+/* 모든 a 태그 : 밑줄 없음 */
+
+a {text-decoration: none;}
+
+/* nav1 아이디안의 a 상태 선택자 */
+#nav1 a:link { color:black}
+#nav1 a:visited { color:black}
+/* 롤오버 상태 */
+#nav1 a:hover {color:forestgreen; 
+                text-decoration: underline;}
+ /* 활성 상태 */
+#nav1 a:active { background-color: fuchsia;}
+
+/* nav2 아이디안의 그룹으로 a 상태선택자 정의 */
+#nav2 a{font-weight: bold;}
+#nav2 a:link, #nav2 a:visited{
+    color:red
+}
+
+#nav2 a:hover, #nav2 a:active{
+    background-color: royalblue;
+    color: silver;
+}
+
+/* nav3 아이디안의 a 스타일*/
+#nav3 a{font-size: 2em; color: darkgoldenrod;}
+#nav3 a:hover{font-size: 4em;}
+
+/* form1 아이디안의 input 디자인 */
+#form1 input{border: 1px solid black;
+            width: 200px;}
+
+#form1 input:hover{ background-color: lime;}
+/* 커서 활성화 */
+#form1 input:focus{ background-color: lightpink;}
+
+/* form2 아이디안의 input 디자인 */
+#form2 input { 
+                border:none; /*테두리 없음*/
+                border-bottom: 1px solid black;
+                width:200px; background: none;}
+
+#form2 input:focus {
+    background-color: blanchedalmond;
+    color: coral;
+    text-align: center;
+}
+
+/* 테이블에 관련된 css 속성
+    테두리 병합
+    border-collapse:collapse
+*/
+#table1{
+    border-collapse: collapse; /*테이블 전체의 외곽부분*/
+    width: 400px;
+    border:5px solid black;
+    background-color: lightblue;
+   /* 중앙정렬, 위아래 바깥 여백 지정*/
+   margin:50px auto 50px auto;
+}
+/* 셀 기준 안쪽 여백 
+    padding:값px;
+    padding:값1px 값2px; 상하 좌우
+    padding:값1px 값2px 값3px 값4px; 12시 3시 6시 9시 방향 값
+*/
+#table1 td{
+    border:3px solid black;
+    text-align: center;
+    /* 상하만 안쪽 여백 지정 */
+    padding:10px 0 10px 0;
+}
+
+/* 
+    바깥 여백
+    3시랑 9시를 auto로 지정하면 블록요소인 경우 중앙정렬
+    margin:값px;
+    margin:값1px 값2px; 상하 좌우
+    margin:값1px 값2px 값3px 값4px; 12시 3시 6시 9시
+*/
+
+/* 테이블의 행단위 롤오버 */
+#table1 tr:hover{
+    background-color: lightgoldenrodyellow;
+}
+/* 테이블의 1행 디자인 */
+#table1 tr:first-child td{
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+/* caption 디자인 */
+#table1 caption {
+    background-color: darkgray;
+    color: whitesmoke;
+    border-radius: 20px;
+    padding:10px 0 10px 0;
+    text-align: center;
+    margin:10px auto 50px auto;
+}
